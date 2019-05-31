@@ -32,7 +32,13 @@ class Navbar extends React.Component {
           <div className="navbar-brand">
 
             <Link to="/" >
-              <img  className="logo" src="https://image.flaticon.com/icons/svg/1348/1348805.svg"/>
+              <i className="fas fa-leaf"></i>
+
+            </Link>
+
+            <Link to="/" >
+              <img  className="logo" src="../images/leaf.png"/>
+
             </Link>
 
             <a role="button" className={`navbar-burger${this.state.active ? ' is-active' : ''}`} onClick={this.toggleActive}>
@@ -45,8 +51,8 @@ class Navbar extends React.Component {
           <div className={`navbar-menu${this.state.active ? ' is-active' : ''}`}>
 
             <div className="navbar-start">
-              <Link to="/cabins" className="navbar-item">Check out our Cabins!</Link>
-              {Auth.isAuthenticated() && <Link to="/cabins/new" className="navbar-item">Add a Cabin</Link>}
+              <Link to="/products" className="navbar-item">Check out our Products</Link>
+              {Auth.isAuthenticated() && <Link to="/cabins/new" className="navbar-item">Add a Product</Link>}
             </div>
 
 

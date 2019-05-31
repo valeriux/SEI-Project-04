@@ -4,7 +4,7 @@ from pony.orm import Database
 app = Flask(__name__)
 db = Database()
 # connects to the database
-db.bind(provider='postgres', database='sandwich-db')
+db.bind(provider='postgres', database='natura_db')
 
 
 from config import routes

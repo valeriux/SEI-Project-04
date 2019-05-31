@@ -51,4 +51,4 @@ with db_session():
         user=valeriux
         )
 
-    db.commit() # Writes the SQL and runs it against the db
+    db.commit()
