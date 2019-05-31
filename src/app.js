@@ -1,27 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import axios from 'axios'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import 'bulma'
+
+import Home from './components/Home'
+import ProductsIndex from './components/ProductsIndex'
 
 class App extends React.Component {
-
-  componentDidMount() {
-    axios.get('/api/products')
-      .then(res => this.setState({ products: res.data }))
-  }
-
   render() {
-    if(!this.state) return <p>Loading...</p>
     return (
-      <div>
-        {this.state.products.map(product => <div key={product.id}>
-          <h2>{product.name}</h2>
-          <p>{product.image}</p>
-          <p>{product.description}</p>
-          <p>£{product.price.toFixed(2)}</p>
-        </div>)}
-      </div>
+      <Router>
+        <main>
+
+          <Switch>
+            <Route path="/products" component={ProductsIndex}/>
+            <Route path="/" component={Home}/>
+          </Switch>
+
+        </main>
+      </Router>
+
     )
   }
+
 }
 
 ReactDOM.render(
