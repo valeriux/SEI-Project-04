@@ -27,7 +27,11 @@ with db_session():
         description='A wonderful and amazingly soft skin, with a delicious perfume.',
         price='25',
         Qty="12",
-        categories=[Body_Care],
+        address='Great Russell Street, London',
+        latitude=51.51936,
+        longitude=-0.12687,
+        postcode='WC1B 3DG',
+        categories=Body_Care,
         user=valeriux
     )
 
@@ -37,7 +41,11 @@ with db_session():
         description='A 30h body hydration with a sweet fragrance.',
         price='20',
         Qty="3",
-        categories=[Body_Care],
+        address='1 Lime Street, London',
+        latitude=51.51301,
+        longitude=-0.08228,
+        postcode='EC3M 7HA',
+        categories=Bath,
         user=valeriux
         )
 
@@ -47,7 +55,11 @@ with db_session():
         description='Beautiful palm tree of the Cerrado region, in the center of Brazil, the Buriti gives a fruit with multiple benefits for the local people.',
         price='16',
         Qty="8",
-        categories=[Hair_Care],
+        address='2 Fletching Lane, Uckfield, East Sussex',
+        longitude=-0.10607,
+        latitude=50.92269,
+        postcode='TN22 3SS',
+        categories=Hair_Care,
         user=valeriux
         )
 

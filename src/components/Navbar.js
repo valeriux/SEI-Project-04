@@ -32,11 +32,6 @@ class Navbar extends React.Component {
           <div className="navbar-brand">
 
             <Link to="/" >
-              <i className="fas fa-leaf"></i>
-
-            </Link>
-
-            <Link to="/" >
               <img  className="logo" src="../images/leaf.png"/>
 
             </Link>
@@ -52,7 +47,7 @@ class Navbar extends React.Component {
 
             <div className="navbar-start">
               <Link to="/products" className="navbar-item">Check out our Products</Link>
-              {Auth.isAuthenticated() && <Link to="/cabins/new" className="navbar-item">Add a Product</Link>}
+              {Auth.isAuthenticated() && <Link to="/products/new" className="navbar-item">Add a Product</Link>}
             </div>
 
 

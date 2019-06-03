@@ -10,11 +10,9 @@ router = Blueprint(__name__, 'products')
 @router.route('/products', methods=['GET'])
 @db_session
 def index():
-
     schema = ProductSchema(many=True)
     products = Product.select()
     return schema.dumps(products)
-
 
 @router.route('/products', methods=['POST'])
 @db_session
@@ -24,21 +22,16 @@ def create():
 
     try:
         data = schema.load(request.get_json())
-        data['user'] = g.current_user
-        product = Product(**data)
+        product = Product(**data, user=g.current_user)
         db.commit()
     except ValidationError as err:
         return jsonify({'message': 'Validation failed', 'errors': err.messages}), 422
-
     return schema.dumps(product), 201
-
 
 @router.route('/products/<int:product_id>', methods=['GET'])
 @db_session
 def show(product_id):
-
     schema = ProductSchema()
-
     product = Product.get(id=product_id)
 
     if not product:
@@ -46,13 +39,13 @@ def show(product_id):
 
     return schema.dumps(product)
 
-
 @router.route('/products/<int:product_id>', methods=['PUT'])
 @db_session
 @secure_route
 def update(product_id):
     schema = ProductSchema()
     product = Product.get(id=product_id)
+
 
     if not product:
         abort(404)

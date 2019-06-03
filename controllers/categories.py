@@ -17,15 +17,14 @@ def index():
 @db_session
 def create():
     schema = CategorySchema()
+
     try:
         data = schema.load(request.get_json())
         category = Category(**data)
         db.commit()
     except ValidationError as err:
         return jsonify({'message': 'Validation failed', 'errors': err.messages}), 422
-
     return schema.dumps(category), 201
-
 
 @router.route('/categories/<int:category_id>', methods=['GET'])
 @db_session
@@ -36,15 +35,15 @@ def show(category_id):
     if not category:
         abort(404)
 
-
     return schema.dumps(category)
-
 
 @router.route('/categories/<int:category_id>', methods=['PUT'])
 @db_session
+#@secure_route
 def update(category_id):
     schema = CategorySchema()
     category = Category.get(id=category_id)
+
 
     if not category:
         abort(404)
@@ -61,6 +60,7 @@ def update(category_id):
 
 @router.route('/categories/<int:category_id>', methods=['DELETE'])
 @db_session
+#@secure_route
 def delete(category_id):
     category = Category.get(id=category_id)
 

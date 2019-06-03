@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductCard = (props) => {
+const CabinCard = (props) => {
   return (
     <div className="card">
 
@@ -14,8 +14,14 @@ const ProductCard = (props) => {
         </figure>
       </div>
 
+      <div className="card-header">
+        <h3 className="card-header-title">{props.address}</h3>
+      </div>
+
+
+
     </div>
   )
 }
 
-export default ProductCard
+export default CabinCard

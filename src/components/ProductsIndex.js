@@ -1,40 +1,59 @@
 import React from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
-import ProductCard from './ProductCard'
+import { Link } from 'react-router-dom'
 
-class ProductsIndex extends React.Component {
+import ProductCard from './ProductCard'
+import IndexMap from './IndexMap'
+
+class Index extends React.Component {
+
   constructor() {
     super()
+
     this.state = {
-      data: []
+      products: [],
+      view: 'map'
     }
+    this.setView = this.setView.bind(this)
+  }
+
+  setView(view) {
+    this.setState({ view })
   }
 
   componentDidMount() {
-    axios.get('api/products')
-      .then(res => this.setState({ data: res.data }))
+    axios('/api/products')
+      .then(res => this.setState({ products: res.data }))
   }
 
   render() {
-    console.log(this.state)
     return (
       <section className="section">
         <div className="container">
+
+          <div className="level-left">
+            <button className="button is-danger fas fa-map-marker-alt" onClick={() => this.setView('map')}>Map view</button>
+            <button className="button is-danger fas fa-list" onClick={() => this.setView('list')}>List View</button>
+          </div>
+          {this.state.view === 'map' &&
+            <IndexMap className="show" products={this.state.products}/>
+          }
+          {this.state.view === 'list' &&
+
           <div className="columns is-multiline">
-            {this.state.data.map(product =>
+            {this.state.products.map(product =>
               <div key={product._id} className="column is-one-quarter-desktop is-one-third-tablet">
-                <Link to ={`/products/${product._id}`}>
+                <Link to={`/products/${product._id}`}>
                   <ProductCard {...product} />
                 </Link>
               </div>
             )}
           </div>
+          }
         </div>
       </section>
     )
   }
-
 }
 
-export default ProductsIndex
+export default Index

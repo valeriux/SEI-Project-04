@@ -1,5 +1,5 @@
 from app import db
-from pony.orm import Required, Set
+from pony.orm import Required
 from marshmallow import Schema, fields, post_load
 from .Category import Category
 
@@ -9,7 +9,11 @@ class Product(db.Entity):
     description = Required(str)
     price = Required(float)
     Qty = Required(int)
-    categories = Set('Category')
+    address = Required(str)
+    postcode = Required(str)
+    latitude = Required(float)
+    longitude = Required(float)
+    categories = Required('Category')
     user = Required('User')
 
 
@@ -20,14 +24,18 @@ class ProductSchema(Schema):
     description = fields.Str(required=True)
     price = fields.Float(required=True)
     Qty = fields.Int(required=True)
-    categories = fields.Nested('CategorySchema', many=True, exclude=('products',), dump_only=True)
-    category_ids = fields.List(fields.Int(), load_only=True)
+    address = fields.Str(required=True)
+    postcode = fields.Str(required=True)
+    latitude = fields.Float(required=True)
+    longitude = fields.Float(required=True)
+    category = fields.Nested('CategorySchema', many=True, exclude=('products',), dump_only=True)
+    category_ids = fields.Int(load_only=True)
     user = fields.Nested('UserSchema', exclude=('email', 'products'))
 
 
     @post_load
-    def load_categories(self, data):
-        data['categories'] = [Category.get(id=cat_id) for cat_id in data['category_ids']]
-        del data['category_ids']
+    def load_category(self, data):
+        data['category'] = Category.get(id=data['category_id'])
+        del data['category_id']
 
         return data

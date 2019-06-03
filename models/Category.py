@@ -9,4 +9,4 @@ class Category(db.Entity):
 class CategorySchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)
-    products = fields.Nested('ProductSchema', many=True, exclude=('categories',), dump_only=True)
+    products = fields.Nested('ProductSchema', many=True, exclude=('category',), dump_only=True)

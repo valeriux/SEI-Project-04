@@ -3,7 +3,7 @@ from pony.orm import Database
 
 app = Flask(__name__)
 db = Database()
-# connects to the database
+
 db.bind(provider='postgres', database='natura_db')
 
 

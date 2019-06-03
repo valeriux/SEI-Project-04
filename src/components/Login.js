@@ -1,8 +1,11 @@
 import React from 'react'
 import axios from 'axios'
+
 import Auth from '../lib/Auth'
+import Flash from '../lib/Flash'
 
 class Login extends React.Component {
+
   constructor() {
     super()
 
@@ -10,28 +13,32 @@ class Login extends React.Component {
       data: {},
       error: ''
     }
+
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(e) {
-    const data = {...this.state.data, [e.target.name]: e.target.value}
-    this.setState({ data: data})
-  }
 
+    const data = { ...this.state.data, [e.target.name]: e.target.value }
+
+    this.setState({ data })
+  }
 
   handleSubmit(e) {
     e.preventDefault()
 
-    axios.post('api/login', this.state.data)
+    axios.post('/api/login', this.state.data)
       .then(res => {
         Auth.setToken(res.data.token)
-        this.props.history.push('/cabins')
+        Flash.setMessage('success', res.data.message)
+        this.props.history.push('/products')
       })
-      .catch(() => this.setState({error: 'Invalid credentials'}))
+      .catch(() => this.setState({ error: 'Invalid credentials' }))
   }
 
   render() {
+    console.log(this.state)
     return (
       <section className="section">
         <div className="container">
@@ -41,14 +48,24 @@ class Login extends React.Component {
                 <div className="field">
                   <label className="label">Email</label>
                   <div className="control">
-                    <input className="input" name="email" placeholder="eg: leela@planetexpress.nnyc" onChange={this.handleChange} />
+                    <input
+                      className="input"
+                      name="email"
+                      placeholder="eg: leela@planetexpress.nnyc"
+                      onChange={this.handleChange}
+                    />
                   </div>
                 </div>
-
                 <div className="field">
                   <label className="label">Password</label>
                   <div className="control">
-                    <input className="input" name="password" type="password" placeholder="eg: ••••••••" onChange={this.handleChange} />
+                    <input
+                      className="input"
+                      name="password"
+                      type="password"
+                      placeholder="eg: ••••••••"
+                      onChange={this.handleChange}
+                    />
                   </div>
 
                   {this.state.error && <div className="help is-danger">{this.state.error}</div>}
@@ -63,6 +80,5 @@ class Login extends React.Component {
     )
   }
 }
-
 
 export default Login
