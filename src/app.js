@@ -16,6 +16,7 @@ import ProductNew from './components/ProductNew'
 import ProductEdit from './components/ProductEdit'
 import ProductShow from './components/ProductShow'
 import ProductsIndex from './components/ProductsIndex'
+import SearchProduct from './components/SearchProduct'
 
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Navbar/>
           <FlashMessages />
           <Switch>
+            <Route path="/products/search" component={SearchProduct} />
             <Route path="/products/:id/Edit" component={ProductEdit}/>
             <Route path="/products/new" component={ProductNew}/>
             <Route path="/products/:id" component={ProductShow}/>

@@ -42,8 +42,8 @@ class Index extends React.Component {
 
           <div className="columns is-multiline">
             {this.state.products.map(product =>
-              <div key={product._id} className="column is-one-quarter-desktop is-one-third-tablet">
-                <Link to={`/products/${product._id}`}>
+              <div key={product.id} className="column is-one-quarter-desktop is-one-third-tablet">
+                <Link to={`/products/${product.id}`}>
                   <ProductCard {...product} />
                 </Link>
               </div>

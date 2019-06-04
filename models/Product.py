@@ -1,35 +1,35 @@
 from app import db
-from pony.orm import Required
+from pony.orm import Required, Optional
 from marshmallow import Schema, fields, post_load
 from .Category import Category
 
 class Product(db.Entity):
     name = Required(str)
-    image = Required(str)
+    image = Optional(str)
     description = Required(str)
     price = Required(float)
-    Qty = Required(int)
+    qty = Required(int)
     address = Required(str)
     postcode = Required(str)
     latitude = Required(float)
     longitude = Required(float)
-    categories = Required('Category')
+    category = Required('Category')
     user = Required('User')
 
 
 class ProductSchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)
-    image = fields.Str(required=True)
+    image = fields.Str()
     description = fields.Str(required=True)
     price = fields.Float(required=True)
-    Qty = fields.Int(required=True)
+    qty = fields.Int(required=True)
     address = fields.Str(required=True)
     postcode = fields.Str(required=True)
-    latitude = fields.Float(required=True)
-    longitude = fields.Float(required=True)
-    category = fields.Nested('CategorySchema', many=True, exclude=('products',), dump_only=True)
-    category_ids = fields.Int(load_only=True)
+    latitude = fields.Float()
+    longitude = fields.Float()
+    category = fields.Nested('CategorySchema', exclude=('products',), dump_only=True)
+    category_id = fields.Int(load_only=True)
     user = fields.Nested('UserSchema', exclude=('email', 'products'))
 
 

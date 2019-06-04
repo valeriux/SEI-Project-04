@@ -15,6 +15,14 @@ with db_session():
         password_hash=schema.generate_hash('pass')
     )
 
+    schema = UserSchema()
+    doris = User(
+        username='doris',
+        email='diobraderu@hotmail.com',
+        password_hash=schema.generate_hash('pass')
+    )
+
+
     Body_Care = Category(name='Body Care')
     Bath = Category(name='Bath')
     Hair_Care = Category(name='Hair Care')
@@ -26,12 +34,12 @@ with db_session():
         image='https://www.naturabrasil.fr/product/image/large/50172170_1.jpg',
         description='A wonderful and amazingly soft skin, with a delicious perfume.',
         price='25',
-        Qty="12",
+        qty="12",
         address='Great Russell Street, London',
         latitude=51.51936,
         longitude=-0.12687,
         postcode='WC1B 3DG',
-        categories=Body_Care,
+        category=Body_Care,
         user=valeriux
     )
 
@@ -40,12 +48,12 @@ with db_session():
         image='https://www.naturabrasil.fr/product/image/large/50189140_1.jpg',
         description='A 30h body hydration with a sweet fragrance.',
         price='20',
-        Qty="3",
+        qty="3",
         address='1 Lime Street, London',
         latitude=51.51301,
         longitude=-0.08228,
         postcode='EC3M 7HA',
-        categories=Bath,
+        category=Bath,
         user=valeriux
         )
 
@@ -54,12 +62,12 @@ with db_session():
         image='https://www.naturabrasil.fr/product/image/large/50145694_1.jpg',
         description='Beautiful palm tree of the Cerrado region, in the center of Brazil, the Buriti gives a fruit with multiple benefits for the local people.',
         price='16',
-        Qty="8",
+        qty="8",
         address='2 Fletching Lane, Uckfield, East Sussex',
         longitude=-0.10607,
         latitude=50.92269,
         postcode='TN22 3SS',
-        categories=Hair_Care,
+        category=Hair_Care,
         user=valeriux
         )
 

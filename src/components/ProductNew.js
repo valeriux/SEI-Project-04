@@ -1,6 +1,6 @@
 import React from 'react'
-import Auth from '../lib/Auth'
 import axios from 'axios'
+import Auth from '../lib/Auth'
 import ReactFilestack from 'filestack-react'
 
 const choices = {
@@ -13,7 +13,6 @@ const choices = {
 }
 
 class ProductNew extends React.Component {
-
   constructor() {
     super()
 
@@ -23,7 +22,6 @@ class ProductNew extends React.Component {
       file: null,
       categories: []
     }
-
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleUploadedImages = this.handleUploadedImages.bind(this)
@@ -89,6 +87,7 @@ class ProductNew extends React.Component {
             <div className="column is-half-desktop is-two-thirds-tablet">
 
               <h1 className="title is-3"> Add Products</h1>
+
               <form onSubmit={this.handleSubmit}>
 
                 <div className="field">
@@ -101,7 +100,7 @@ class ProductNew extends React.Component {
                       placeholder="eg: products in Lima"
                       onChange={this.handleChange} />
                   </div>
-                  {this.state.errors.name && <div className="help is-danger">{this.state.errors.name}</div>}
+                  {this.state.errors.name && <div className="help is-danger">{this.state.errors.name[0]}</div>}
                 </div>
 
 
@@ -110,14 +109,14 @@ class ProductNew extends React.Component {
                   <label className="label">Image</label>
                   <ReactFilestack
                     apikey="A0y7LFvTfTXGeE0Xy0f9vz"
-                    buttonText="Upload Photo Cabin"
+                    buttonText="Upload Photo Product"
                     buttonClass="button"
                     options={choices}
                     preload={true}
                     onSuccess={this.handleUploadedImages}
                   />
                   {this.state.data.image && <img src={this.state.data.image} />}
-                  {this.state.errors.image && <div className="help is-danger">{this.state.errors.image}</div>}
+                  {this.state.errors.image && <div className="help is-danger">{this.state.errors.image[0]}</div>}
                 </div>
 
                 <div className="field">
@@ -130,7 +129,7 @@ class ProductNew extends React.Component {
                       placeholder="eg: This is a hydratant hands cream"
                       onChange={this.handleChange} />
                   </div>
-                  {this.state.errors.description && <div className="help is-danger">{this.state.errors.description}</div>}
+                  {this.state.errors.description && <div className="help is-danger">{this.state.errors.description[0]}</div>}
                 </div>
 
 
@@ -147,7 +146,7 @@ class ProductNew extends React.Component {
                     />
                   </div>
                 </div>
-                {this.state.errors.price && <div className="help is-danger">{this.state.errors.price}</div>}
+                {this.state.errors.price && <div className="help is-danger">{this.state.errors.price[0]}</div>}
 
 
                 <div className="field">
@@ -163,7 +162,7 @@ class ProductNew extends React.Component {
                     />
                   </div>
                 </div>
-                {this.state.errors.qty && <div className="help is-danger">{this.state.errors.qty}</div>}
+                {this.state.errors.qty && <div className="help is-danger">{this.state.errors.qty[0]}</div>}
 
                 <div className="field">
                   <label className="label">Category</label>
@@ -179,7 +178,7 @@ class ProductNew extends React.Component {
                       )}
                     </select>
                   </div>
-                  {this.state.errors.category_id && <div className="help is-danger">{this.state.errors.category_id}</div>}
+                  {this.state.errors.category_id && <div className="help is-danger">{this.state.errors.category_id[0]}</div>}
                 </div>
 
 

@@ -20,7 +20,7 @@ class IndexMap extends React.Component {
   }
 
   handleMarkerClick(product) {
-    if(product === this.state.selected) this.setState({ selectedProduct: null })
+    if(product === this.state.selectedProduct) this.setState({ selectedProduct: null })
     else this.setState({ selectedProduct: product })
   }
 
@@ -44,7 +44,7 @@ class IndexMap extends React.Component {
 
             {this.props.products.map(product =>
               <Marker className="marker"
-                key={product._id}
+                key={product.id}
                 coordinates={[product.longitude, product.latitude]}
                 anchor="bottom"
                 onClick={() => this.handleMarkerClick(product)}
@@ -54,7 +54,7 @@ class IndexMap extends React.Component {
             )}
 
             {this.state.selectedProduct &&
-              <Link to ={`/products/${this.state.selectedProduct._id}`} key={this.state.selectedProduct._id}>
+              <Link to ={`/products/${this.state.selectedProduct.id}`} key={this.state.selectedProduct.id}>
                 <Popup className="popup"
                   coordinates={[this.state.selectedProduct.longitude, this.state.selectedProduct.latitude]}
                   offset={{
