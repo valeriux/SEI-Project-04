@@ -33,7 +33,7 @@ class UserShow extends React.Component {
           <div className="column is-desktop">
             {this.canModify() &&
           <div>
-            <Link to={`/users/${this.state.user._id}/edit`} className="button is-info">Edit Profile
+            <Link to={`/users/${this.state.user.id}/edit`} className="button is-info">Edit Profile
             </Link>
           </div>
             }

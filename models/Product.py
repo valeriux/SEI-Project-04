@@ -1,5 +1,5 @@
 from app import db
-from pony.orm import Required, Optional
+from pony.orm import Required, Optional, StrArray
 from marshmallow import Schema, fields, post_load
 from .Category import Category
 
@@ -31,6 +31,8 @@ class ProductSchema(Schema):
     category = fields.Nested('CategorySchema', exclude=('products',), dump_only=True)
     category_id = fields.Int(load_only=True)
     user = fields.Nested('UserSchema', exclude=('email', 'products'))
+
+
 
 
     @post_load

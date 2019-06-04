@@ -45,7 +45,7 @@ with db_session():
 
     Product(
         name='Acai Soft Body Cream - EKOS',
-        image='https://www.naturabrasil.fr/product/image/large/50189140_1.jpg',
+        image='https://www.naturabrasil.fr/product/image/large/50145694_1.jpg',
         description='A 30h body hydration with a sweet fragrance.',
         price='20',
         qty="3",
@@ -57,18 +57,6 @@ with db_session():
         user=valeriux
         )
 
-    Product(
-        name='Buriti Conditioner for Dull or Colored Hair - EKOS',
-        image='https://www.naturabrasil.fr/product/image/large/50145694_1.jpg',
-        description='Beautiful palm tree of the Cerrado region, in the center of Brazil, the Buriti gives a fruit with multiple benefits for the local people.',
-        price='16',
-        qty="8",
-        address='2 Fletching Lane, Uckfield, East Sussex',
-        longitude=-0.10607,
-        latitude=50.92269,
-        postcode='TN22 3SS',
-        category=Hair_Care,
-        user=valeriux
-        )
+
 
     db.commit()

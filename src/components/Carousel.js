@@ -1,7 +1,6 @@
 import React from 'react'
 import SlideShow from 'react-image-show'
 
-
 const imagesCabins  =[
   'https://coolstays.imgix.net/18433.jpg?&h=700&fit=crop&auto=compress',
   'https://adorable-home.com/wp-content/uploads/2017/02/Fantasy-Bamboo-Cabin-9.jpg',
@@ -15,14 +14,15 @@ const imagesCabins  =[
   'https://loghouseholidays.co.uk/wp-content/uploads/2018/11/Lakeside-log-cabin.jpg'
 ]
 
+
 const Slider = (props) => {
   console.log(props)
   return (
     <SlideShow
       images={imagesCabins}
-      width="800px"
-      imagesWidth="600px"
-      imagesHeight="450px"
+      width="900px"
+      imagesWidth="900px"
+      imagesHeight="550px"
       imagesHeightMobile="56vw"
       thumbnailsWidth="920px"
       thumbnailsHeight="12vw"
