@@ -1,6 +1,7 @@
 import React from 'react'
 import '../style.scss'
 
+
 const Home = () => {
   return (
     <section className="section">
@@ -8,6 +9,10 @@ const Home = () => {
         <h1 className="title is-1"> Natura Products Database</h1>
         <h2 className="subtitle is-2"> A site for Natura Products </h2>
       </div>
+
+
+
+
     </section>
   )
 }

@@ -17,6 +17,9 @@ import ProductEdit from './components/ProductEdit'
 import ProductShow from './components/ProductShow'
 import ProductsIndex from './components/ProductsIndex'
 import SearchProduct from './components/SearchProduct'
+import UserShow from './components/UserShow'
+import UserEdit from './components/UserEdit'
+import Carousel from './components/Carousel'
 
 
 class App extends React.Component {
@@ -27,8 +30,13 @@ class App extends React.Component {
           <Navbar/>
           <FlashMessages />
           <Switch>
-            <Route path="/products/search" component={SearchProduct} />
+            <Route path="/users/:id/edit" component={UserEdit}/>
+            <Route path="/users/:id" component={UserShow} />
+
             <Route path="/products/:id/Edit" component={ProductEdit}/>
+
+            <Route path="/products/carousel" component={Carousel}/>
+
             <Route path="/products/new" component={ProductNew}/>
             <Route path="/products/:id" component={ProductShow}/>
             <Route path="/products" component={ProductsIndex}/>

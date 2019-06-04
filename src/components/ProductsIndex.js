@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import SearchProduct from './SearchProduct'
 
 import ProductCard from './ProductCard'
 import IndexMap from './IndexMap'
@@ -30,7 +31,7 @@ class Index extends React.Component {
     return (
       <section className="section">
         <div className="container">
-
+          <SearchProduct products={this.state.product}/>
           <div className="level-left">
             <button className="button is-danger fas fa-map-marker-alt" onClick={() => this.setView('map')}>Map view</button>
             <button className="button is-danger fas fa-list" onClick={() => this.setView('list')}>List View</button>

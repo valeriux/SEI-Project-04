@@ -73,3 +73,14 @@ def delete(product_id):
     db.commit()
 
     return '', 204
+
+@router.route('/products/<int:product_id>/attend', methods=['POST'])
+@db_session
+@secure_route
+def attend(product_id):
+    schema = ProductSchema()
+    product = Product.get(id=product_id)
+    product.attended_by.add(g.current_user.id)
+    db.commit()
+
+    return schema.dumps(product)

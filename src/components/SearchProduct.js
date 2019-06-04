@@ -1,10 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import Select from 'react-select'
-
+import { withRouter } from 'react-router-dom'
 
 class SearchProduct extends React.Component {
-
 
   constructor() {
     super()
@@ -62,4 +61,4 @@ class SearchProduct extends React.Component {
   }
 }
 
-export default SearchProduct
+export default withRouter(SearchProduct)

@@ -50,13 +50,16 @@ class Navbar extends React.Component {
             <div className="navbar-start">
               <Link to="/products" className="navbar-item">Check out our Products</Link>
 
-              <Link to="/products/search" className="navbar-item"><i className="fas fa-dog fa-2x"></i>  Search for a Product</Link>
+
+              <Link to="/products/carousel" className="navbar-item"><i className="fas fa-dog fa-2x"></i>  Carousel</Link>
+
+
 
               {Auth.isAuthenticated() && <Link to="/products/new" className="navbar-item">Add a Product</Link>}
             </div>
 
             <div className="navbar-end">
-              <SearchProduct/ >
+
 
               {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Log in</Link>}
@@ -74,3 +77,7 @@ class Navbar extends React.Component {
 }
 
 export default withRouter(Navbar)
+
+
+
+//    {Auth.isAuthenticated() && <Link to={`/users/${Auth.getPayload().sub}`} className="navbar-item">My Account</Link>}
