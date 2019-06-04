@@ -17,7 +17,7 @@ class ProductEdit extends React.Component {
     super()
 
     this.state = {
-      data: {},
+      data: null,
       errors: {},
       file: null,
       categories: []
@@ -48,7 +48,22 @@ class ProductEdit extends React.Component {
 
     console.log(this.state.data, 'this.state.data before sending')
 
+
   }
+
+  componentDidMount() {
+    axios.get(`api/products/${this.props.match.params.id}`)
+      .then(res => {
+        res.data.category_id = res.data.category.id
+        this.setState({ data: res.data })
+      })
+
+    {
+      axios.get('/api/categories')
+        .then(res => this.setState({ categories: res.data }))
+    }
+  }
+
 
   sortedCategories(){
     return this.state.categories.sort((a,b) => {
@@ -64,6 +79,7 @@ class ProductEdit extends React.Component {
   }
 
   render() {
+    if(!this.state.data) return null
     return (
       <section className="section">
         <div className="container">
@@ -177,7 +193,7 @@ class ProductEdit extends React.Component {
                 <div className="field">
                   <label className="label">Category</label>
                   <div className="select">
-                    <select name="category_id" defaultValue="Choose a Category..." onChange={this.handleChange}>
+                    <select name="category_id" onChange={this.handleChange} value={this.state.data.category_id}>
                       <option disabled>Choose a category</option>
                       {this.sortedCategories().map(category =>
                         <option
