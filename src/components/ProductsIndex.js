@@ -33,9 +33,9 @@ class Index extends React.Component {
         <div className="container">
           <SearchProduct products={this.state.product}/>
           <div className="level-left">
-          
-            <button className="button is-danger fas fa-map-marker-alt" onClick={() => this.setView('map')}>Map view</button>
-            <button className="button is-danger fas fa-list" onClick={() => this.setView('list')}>List View</button>
+
+            <button id="buton_mapview" className="button is-danger fas fa-map-marker-alt" onClick={() => this.setView('map')}>Map view</button>
+            <button id="buton_listview" className="button is-danger fas fa-list" onClick={() => this.setView('list')}>List View</button>
           </div>
           {this.state.view === 'map' &&
             <IndexMap className="show" products={this.state.products}/>

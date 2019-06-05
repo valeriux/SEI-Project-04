@@ -14,7 +14,6 @@ const ProductCard = ({ name, images, address }) => {
         </figure>
       </div>
 
-  
 
       <div className="card-content">
         <div className="content">

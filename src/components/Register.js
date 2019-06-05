@@ -26,21 +26,21 @@ class Register extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     axios.post('/api/register', this.state.data)
-      .then(() => this.props.history.push('/login')) 
+      .then(() => this.props.history.push('/login'))
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
   render() {
     console.log(this.state)
     return (
-      <section className="section">
+      <section className="image_register">
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-half-desktop is-two-thirds-tablet">
               <form onSubmit={this.handleSubmit}>
 
                 <div className="field">
-                  <label className="label">Username</label>
+                  <label className="label_Username">Username</label>
                   <div className="control">
                     <input
                       className="input"
@@ -54,7 +54,7 @@ class Register extends React.Component {
                 </div>
 
                 <div className="field">
-                  <label className="label">Email</label>
+                  <label className="label_Email">Email</label>
                   <div className="control">
                     <input
                       className="input"
@@ -67,7 +67,7 @@ class Register extends React.Component {
                 </div>
 
                 <div className="field">
-                  <label className="label">Password</label>
+                  <label className="label_Password">Password</label>
                   <div className="control">
                     <input
                       className="input"
@@ -81,7 +81,7 @@ class Register extends React.Component {
                 </div>
 
                 <div className="field">
-                  <label className="label">Password Confirmation</label>
+                  <label className="label_PasswordConf">Password Confirmation</label>
                   <div className="control">
                     <input
                       className="input"

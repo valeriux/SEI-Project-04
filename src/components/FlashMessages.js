@@ -17,7 +17,7 @@ class FlashMessages extends React.Component {
 
     Flash.clearMessages()
 
-    setTimeout(() => this.setState({ messages: null }), 2500)
+    setTimeout(() => this.setState({ messages: null }), 4000)
   }
 
   render() {
@@ -25,7 +25,7 @@ class FlashMessages extends React.Component {
       <div>
         {this.state.messages && Object.keys(this.state.messages).map(type =>
           <div key={type} className={`notification is-${type}`}>
-            <div className="container">{this.state.messages[type]}</div>
+            <div className="container_flash">{this.state.messages[type]}</div>
           </div>
         )}
       </div>

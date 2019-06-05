@@ -40,13 +40,13 @@ class Login extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <section className="section">
+      <section className="image_login">
         <div className="container">
           <div className="columns is-centered">
-            <div className="column is-half-desktop is-two-thirds-tablet">
+            <div id="login_email" className="column is-half-desktop is-two-thirds-tablet">
               <form onSubmit={this.handleSubmit}>
                 <div className="field">
-                  <label className="label">Email</label>
+                  <label className="label_email">Email</label>
                   <div className="control">
                     <input
                       className="input"
@@ -57,7 +57,7 @@ class Login extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label">Password</label>
+                  <label className="label_password">Password</label>
                   <div className="control">
                     <input
                       className="input"
@@ -76,6 +76,8 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
+
+
       </section>
     )
   }
