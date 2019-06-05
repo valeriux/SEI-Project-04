@@ -108,7 +108,7 @@ class ProductNew extends React.Component {
 
                   <label className="label">Image</label>
                   <ReactFilestack
-                    apikey="A0y7LFvTfTXGeE0Xy0f9vz"
+                    apikey="A2dAq9vUYS4WozrEVHO3wz"
                     buttonText="Upload Photo Product"
                     buttonClass="button"
                     options={choices}

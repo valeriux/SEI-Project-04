@@ -31,7 +31,7 @@ class ProductMap extends React.Component {
         <Marker className="marker"
           coordinates={[this.props.data.longitude, this.props.data.latitude]}
           anchor="bottom">
-          <img src={'../images/pin.png'}
+          <img src={'../images/Natura_Logo.png'}
           />
         </Marker>
         <Layer

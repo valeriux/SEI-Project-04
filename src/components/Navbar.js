@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import SearchProduct from './SearchProduct'
+
 
 import Auth from '../lib/Auth'
 
@@ -49,11 +49,6 @@ class Navbar extends React.Component {
 
             <div className="navbar-start">
               <Link to="/products" className="navbar-item">Check out our Products</Link>
-
-
-              <Link to="/products/carousel" className="navbar-item"><i className="fas fa-dog fa-2x"></i>  Carousel</Link>
-
-
 
               {Auth.isAuthenticated() && <Link to="/products/new" className="navbar-item">Add a Product</Link>}
             </div>

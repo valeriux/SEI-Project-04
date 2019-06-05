@@ -25,37 +25,61 @@ class UserShow extends React.Component {
 
   render() {
     console.log(this.state.user)
-    if (!this.state.user.products) return null
+    if (!this.state.user.username) return null
     return(
-      <section className="section">
-        <div className="container">
+      <section className="section user-background">
 
-          <div className="column is-desktop">
-            {this.canModify() &&
+        <div className="container userProfile">
+
+          <div className="columns is-multiline columns-userShow">
+
+            <div className="column is-one-third-desktop img-userProfile">
+
+            </div>
+            <div className="column is-two-thirds-desktop">
+              <p className="subtitle is-3">Welcome back {this.state.user.username}</p>
+
+              <p className="subtitle">Email:{this.state.user.email}</p>
+              <br />
+              <br />
+            </div>
+          </div>
+
+          <div className="columns is-multiline">
+            <div className="column is-full-desktop">
+            </div>
+
+            <div className="column is-desktop products">
+              {this.canModify() &&
           <div>
-            <Link to={`/users/${this.state.user.id}/edit`} className="button is-info">Edit Profile
+            <br />
+            <br />
+            <Link to={`/users/${this.state.user.id}/edit`} className="button is-info editButton">Edit Profile
             </Link>
           </div>
-            }
-          </div>
+              }
 
 
-          <div className="column is-two-thirds-desktop">
-            <p className="subtitle is-3">{this.state.user.username}</p>
-            <p className="subtitle is-3">{this.state.user.email}</p>
-
-            <p className="subtitle is-3">My Shared</p>
-            {this.state.user.products.map(product =>
-              <div key={product.id} className="column is-one-third-desktop is-one-third-tablet">
-                <Link to ={`/plants/${product.id}`}>
-                  <ProductCard {...product} />
-                </Link>
+              <div className="container">
+                <div className="columns is-multiline">
+                  <div className="column is-full-desktop">
+                    <br />
+                    <br />
+                    <p className="subtitle is-3">My Products</p>
+                  </div>
+                  {this.state.user.products.map(product =>
+                    <div key={product.id} className="column is-one-third-desktop is-one-third-tablet">
+                      <Link to ={`/products/${product.id}`}>
+                        <ProductCard {...product} />
+                      </Link>
+                    </div>
+                  )}
+                </div>
               </div>
-            )}
+            </div>
           </div>
-
-
         </div>
+
       </section>
     )
   }

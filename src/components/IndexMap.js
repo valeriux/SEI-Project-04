@@ -34,7 +34,7 @@ class IndexMap extends React.Component {
         <div className="location">
           <Map
             style='mapbox://styles/mapbox/streets-v8'
-            center={[-0.25, 51.1010]}
+            center={[-0.07352, 51.51541]}
             zoom={[8]}
             containerStyle={{
               height: '80vh',
@@ -49,7 +49,7 @@ class IndexMap extends React.Component {
                 anchor="bottom"
                 onClick={() => this.handleMarkerClick(product)}
               >
-                <img src={'../images/pin.png'}/>
+                <img src={'../images/Natura_Logo.png'}/>
               </Marker>
             )}
 
@@ -62,8 +62,8 @@ class IndexMap extends React.Component {
                   }}>
 
                   <div>
-                    <h3>{this.state.selectedProduct.name}</h3>
-                    <img className="popupimage"src={this.state.selectedProduct.image} alt={this.state.selectedProduct.name}/>
+                    <h3 className="names">{this.state.selectedProduct.name}</h3>
+                    <img className="popupimage"src={this.state.selectedProduct.images[0]} alt={this.state.selectedProduct.name}/>
                   </div>
                 </Popup>
               </Link>

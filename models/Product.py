@@ -5,7 +5,7 @@ from .Category import Category
 
 class Product(db.Entity):
     name = Required(str)
-    image = Optional(str)
+    images = Optional(StrArray)
     description = Required(str)
     price = Required(float)
     qty = Required(int)
@@ -20,7 +20,7 @@ class Product(db.Entity):
 class ProductSchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)
-    image = fields.Str()
+    images = fields.List(fields.Str)
     description = fields.Str(required=True)
     price = fields.Float(required=True)
     qty = fields.Int(required=True)

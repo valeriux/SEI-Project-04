@@ -39,11 +39,15 @@ class UserEdit extends React.Component {
   render() {
     console.log(this.state.data, 'this.state.data')
     return(
-      <section className="section">
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-half-desktop is-two-thirds-tablet">
-              <form onSubmit={this.handleSubmit}>
+      <section className="section1">
+        <div className="container userEdit-container">
+          <div className="columns edit-columns is-multiline is-mobile">
+
+            <form className="userEdit-form" onSubmit={this.handleSubmit}>
+
+              <div className="column is-half-desktop is-two-thirds-tablet">
+
+                <h1 className="title is-3 editTitle"> Editing my account </h1>
 
                 <div className="field">
                   <label className="label">Username</label>
@@ -89,12 +93,14 @@ class UserEdit extends React.Component {
                       placeholder="eg: ••••••••" onChange={this.handleChange} />
                   </div>
                 </div>
-
-                <button className="button is-primary">Submit</button>
-              </form>
-            </div>
+                <div className="level-item">
+                  <button className="button is-primary">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
+
       </section>
     )
   }

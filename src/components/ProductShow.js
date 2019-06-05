@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import Slider from './Carousel'
 
 import Auth from '../lib/Auth'
 
@@ -41,6 +42,9 @@ class ProductShow extends React.Component{
     console.log(this.state, 'this.state. on the show page')
     const state = this.state.product
     if (!this.state.product) return null
+
+    const images = this.state.product.images
+    const randomImages = images
     return (
       <section className="section show">
         <div className="container">
@@ -53,7 +57,7 @@ class ProductShow extends React.Component{
           <div className="columns is-multiline">
             <div className="column is-half-desktop is-full-tablet">
               <figure className="image">
-                <img src={state.image} alt={state.name} />
+                <Slider images={randomImages}/>
               </figure>
             </div>
 
@@ -79,10 +83,6 @@ class ProductShow extends React.Component{
                 <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
               </div>
               }
-
-              {!this.canModify() && <div>
-                <button onClick={this.startConversation}>Check Availability</button>
-              </div>}
 
             </div>
             <ProductMap data={state} />

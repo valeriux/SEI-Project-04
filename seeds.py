@@ -31,7 +31,7 @@ with db_session():
 
     Product(
         name='Acai Beautifying Dry Oil',
-        image='https://www.naturabrasil.fr/product/image/large/50172170_1.jpg',
+        images=['https://www.naturabrasil.fr/product/image/large/50172170_1.jpg', 'https://www.naturabrasil.fr/product/image/large/50145694_1.jpg'],
         description='A wonderful and amazingly soft skin, with a delicious perfume.',
         price='25',
         qty="12",
@@ -45,7 +45,7 @@ with db_session():
 
     Product(
         name='Acai Soft Body Cream - EKOS',
-        image='https://www.naturabrasil.fr/product/image/large/50145694_1.jpg',
+        images=['https://www.naturabrasil.fr/product/image/large/50145694_1.jpg', 'https://www.naturabrasil.fr/product/image/large/50172170_1.jpg'],
         description='A 30h body hydration with a sweet fragrance.',
         price='20',
         qty="3",
