@@ -49,7 +49,7 @@ class IndexMap extends React.Component {
                 anchor="bottom"
                 onClick={() => this.handleMarkerClick(product)}
               >
-                <img src={'../images/Natura_Logo.png'}/>
+                <img src={'/images/Natura_Logo.png'}/>
               </Marker>
             )}
 

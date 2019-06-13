@@ -1,10 +1,18 @@
 from flask import Flask, jsonify
 from pony.orm import Database
 
-app = Flask(__name__)
+from config.environment import db_uri
+
+app = Flask(__name__, static_folder='public')
 db = Database()
 
-db.bind(provider='postgres', database='natura_db')
+db.bind('postgres', db_uri)
+
+# Antes
+# app = Flask(__name__)
+# db = Database()
+#
+# db.bind(provider='postgres', database='natura_db')
 
 
 from config import routes

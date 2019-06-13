@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const Dotenv = require('dotenv-webpack')
@@ -53,6 +54,9 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
+    new CopyWebpackPlugin([
+      { from: 'src/assets', to: 'assets'}
+    ]),
     new Dotenv()
   ]
 }
