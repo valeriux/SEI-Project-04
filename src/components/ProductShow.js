@@ -63,14 +63,26 @@ class ProductShow extends React.Component{
 
             <div className="column is-half-desktop is-full-tablet">
               <div className="column is-half-desktop is-full-tablet">
-                <h2 className="title is-6">Price: {state.price}</h2>
+                <h2 className="title is-6">Price: £ {state.price}</h2>
                 <hr />
               </div>
+
+
+
+              <div className="column is-half-desktop is-full-tablet">
+                <h2 className="title is-6">Stock: {state.qty}</h2>
+                <hr />
+              </div>
+
 
               <div className="column is-half-desktop is-full-tablet">
                 <h2 className="title is-6">Address: {state.address}</h2>
                 <hr />
               </div>
+
+
+
+
               <div className="column is-one-half">
                 <h2 className="title is-6">Description: {state.description}</h2>
                 <hr />
@@ -85,7 +97,7 @@ class ProductShow extends React.Component{
               }
 
             </div>
-            <ProductMap data={state} />
+
           </div>
         </div>
       </section>

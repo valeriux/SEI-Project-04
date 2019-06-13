@@ -35,7 +35,7 @@ class IndexMap extends React.Component {
           <Map
             style='mapbox://styles/mapbox/streets-v8'
             center={[-0.07352, 51.51541]}
-            zoom={[8]}
+            zoom={[10.5]}
             containerStyle={{
               height: '80vh',
               width: '80vw'

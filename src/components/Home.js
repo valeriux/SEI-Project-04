@@ -29,7 +29,7 @@ class Home extends React.Component {
           <section className="section">
             <div className="container">
 
-              <h1 className="title is-2 hometitle1 has-text-right"> Natura Products Database</h1>
+              <h1 className="title is-1 hometitle1 has-text-right"> Natura Products</h1>
               <h2 className="subtitle2 has-text-right">Become a consultant</h2>
             </div>
 
