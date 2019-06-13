@@ -34,7 +34,7 @@ class Navbar extends React.Component {
           <div className="navbar-brand">
 
             <Link to="/" >
-              <img  className="logo" src="/images/leaf.png"/>
+              <img  className="logo" src="../images/leaf.png"/>
 
             </Link>
 
