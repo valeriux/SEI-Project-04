@@ -55,7 +55,7 @@ module.exports = {
       inject: 'body'
     }),
     new CopyWebpackPlugin([
-      { from: 'src/images', to: 'images'}
+      { from: './images', to: 'images'}
     ]),
     new Dotenv()
   ]
