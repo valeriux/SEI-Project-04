@@ -40,7 +40,7 @@ The application is deployed via Git on Heroku and can be found here: [Cabin Feve
   - yarn run:client
 
 
-## App overview
+## Overview
 
 Natura is a top cosmetic and recognized brand in Latin America. Currently they are more than 1,170 corporate business located in 37 countries. The company operates a network of 1.7 million sales consultants throughout the world.
 
