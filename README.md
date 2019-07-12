@@ -46,7 +46,7 @@ Natura is a top cosmetic and recognized brand in Latin America. Currently they a
 
 At present in Peru, is not possible for people who want to acquire Natura products asap, be able to locate the places where they are sell and the availability of them. 
 
-The application allows a user to register, login, add products and edit content, find Natura products’ location, search products and check availability. 
+Natural products application allows a user to register, login, add products, edit content, find Natura products’ location, search products and check availability. 
  
  
 ## Future enhancements
