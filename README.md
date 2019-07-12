@@ -36,8 +36,8 @@ The application is deployed via Git on Heroku and can be found here: [Cabin Feve
   - pipenv to install Python packages.
 * Next run: 
   - yarn seeds to create the initial data for the database
-  - yarn run:server
-  - yarn run:client
+  - yarn run:server - To launch the server 
+  - yarn run:client - To launch the front-end
 
 
 ## Overview
