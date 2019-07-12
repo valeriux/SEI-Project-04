@@ -34,14 +34,13 @@ The brief was to:
 
 ## Installation
 
-* Clone or Download the repo.
-From the terminal run the following;
-- yarn to install JavaScript packages
-- pipenv to install Python packages
+* Clone or Download the repo and from the terminal run the following commands:
+  - yarn to install JavaScript packages
+  - pipenv to install Python packages
 Next run: 
-- yarn seeds to create the initial data for the database
-- yarn run:server
-- yarn run:client
+  - yarn seeds to create the initial data for the database
+  - yarn run:server
+  - yarn run:client
 
 
 ## App overview
