@@ -55,7 +55,9 @@ The project started with an entity-relationship diagram (ERD), was created my pr
 
 <img width="762" alt="Screenshot 2019-07-12 at 10 19 17" src="https://user-images.githubusercontent.com/47470930/61139221-8b3f3f00-a48e-11e9-9b8f-20df88204cb4.png">
 
-Before building the front end I tested the API endpoints using Insomnia. prioritising tasks on Trello.
+Before building the front end I tested the API endpoints using Insomnia. 
+
+<img width="860" alt="Screenshot 2019-07-12 at 10 32 39" src="https://user-images.githubusercontent.com/47470930/61140071-61871780-a490-11e9-94be-8fdaa683c213.png">
 
 
 #### API endpoints
