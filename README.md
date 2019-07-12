@@ -51,7 +51,9 @@ Natural products application allows a user to register, login, add products, edi
  
 ## Development Process
 
+The project started with an entity relationship diagram (ERD). After that, I started creating my project's storyboards on powerpoint to baseline my scope.
 
+Before building the front end I tested the API endpoints using Insomnia.
  
 ## Future enhancements
 
