@@ -1,6 +1,6 @@
 # GA - SEI - PROJECT-04 (Natural Products)
 
-<img width="1100" alt="Screenshot 2019-07-01 at 15 15 17" src="https://user-images.githubusercontent.com/47470930/60443387-10b32b80-9c13-11e9-970e-f877a2d0e975.png">
+<img width="1382" alt="Screenshot 2019-07-12 at 04 55 06" src="https://user-images.githubusercontent.com/47470930/61119808-36d19a80-a461-11e9-8124-ce2843efbf46.png">
 
 
 # Timeframe
