@@ -34,7 +34,17 @@ The brief was to:
 
 ## Installation
 
-* The site can be run locally by cloning the repository and typing npm i and then npm run serve in the terminal.
+The site can be run locally by:
+
+* Clone or Download the repo.
+From the terminal run the following;
+- yarn to install JavaScript packages
+- pipenv to install Python packages
+Next run: 
+- yarn seeds to create the initial data for the database
+- yarn run:server
+- yarn run:client
+
 
 ## App overview
 
