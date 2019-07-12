@@ -53,7 +53,7 @@ Natural products application allows a user to register, login, add products, edi
 
 The project started with an entity relationship diagram (ERD). After that, I started creating my project's storyboards on powerpoint to baseline my scope. 
 
-<img width="758" alt="Screenshot 2019-07-12 at 10 16 58" src="https://user-images.githubusercontent.com/47470930/61139049-34d20080-a48e-11e9-8c3c-bc7ccc13d0c6.png">
+<img width="762" alt="Screenshot 2019-07-12 at 10 19 17" src="https://user-images.githubusercontent.com/47470930/61139221-8b3f3f00-a48e-11e9-9b8f-20df88204cb4.png">
 
 Before building the front end I tested the API endpoints using Insomnia.
 
