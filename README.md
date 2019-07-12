@@ -4,7 +4,7 @@
 
 
 # Timeframe
-* 1 day
+* 7 days (Solo project)
 
 # Technologies used
 * React
