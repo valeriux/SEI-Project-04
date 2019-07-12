@@ -63,5 +63,5 @@ Endpoints were built out for:
  
 ## Future enhancements
 
-* Add an endpoint in the Home page to generate a Random dog.
-* Implement a search to show a list of similar dog names.
+* Add a shopping cart.
+* Add comments to products.
