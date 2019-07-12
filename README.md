@@ -23,14 +23,11 @@
 * Bulma (CSS Framework)
 
 
-## Natural Products
+## Natural Products - Project
 
-This was a pair-coding, hackathon project at General Assembly.
+The brief was to build a full-stack application with a React front-end and PostgreSQL database. The application had to include data schema and a RESTful api framework to enable a user to register, login and add content.
 
-The brief was to:
-
-* Consume a publicly available API and it was Thedogapi API.
-* Deliver the data back in a React app
+The application is deployed via Git on Heroku and can be found here: [Cabin Fever](https://natura-products.herokuapp.com/#/)
 
 ## Installation
 
