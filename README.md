@@ -42,10 +42,12 @@ The application is deployed via Git on Heroku and can be found here: [Cabin Feve
 
 ## App overview
 
-The application allows a user to search for a dog breed, returning the results under the search input. 
-To search you have two options:
-* You can select the breed from the list.
-* You can write for a specific breed
+Natura is a top cosmetic and recognized brand in Latin America. Currently they are more than 1,170 corporate business located in 37 countries. The company operates a network of 1.7 million sales consultants throughout the world.
+
+At present in Peru, is not possible for people who want to acquire Natura products asap, be able to locate the places where they are sell and the availability of them. 
+
+The application allows a user to register, login, add products and edit content, find Natura products’ location, to search products and check availability. 
+ 
 
 In order to implement the search we used react-select. We did two axios request:
 
