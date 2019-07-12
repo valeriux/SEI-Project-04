@@ -49,14 +49,6 @@ At present in Peru, is not possible for people who want to acquire Natura produc
 The application allows a user to register, login, add products and edit content, find Natura products’ location, to search products and check availability. 
  
 
-In order to implement the search we used react-select. We did two axios request:
-
-<img width="1192" alt="Screenshot 2019-07-12 at 04 08 54" src="https://user-images.githubusercontent.com/47470930/61118145-bb221e80-a45d-11e9-8c08-a391d9da8f62.png">
-
-<img width="697" alt="Screenshot 2019-07-12 at 04 18 16" src="https://user-images.githubusercontent.com/47470930/61117542-5c0fda00-a45c-11e9-9b2a-0d8931315e85.png">
-
-* The first one was to obtain the breed with the value that was selected.
-* The second one was to obtain the image per value.
 
 ## Future enhancements
 
