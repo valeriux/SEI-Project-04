@@ -34,8 +34,6 @@ The brief was to:
 
 ## Installation
 
-The site can be run locally by:
-
 * Clone or Download the repo.
 From the terminal run the following;
 - yarn to install JavaScript packages
