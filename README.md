@@ -48,8 +48,7 @@ At present in Peru, is not possible for people who want to acquire Natura produc
 
 The application allows a user to register, login, add products and edit content, find Natura products’ location, search products and check availability. 
  
-
-
+ 
 ## Future enhancements
 
 * Add an endpoint in the Home page to generate a Random dog.
