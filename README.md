@@ -4,21 +4,26 @@
 
 
 # Timeframe
+
 * 7 days (Solo project)
 
 # Technologies used
-* React
-* React Select
-* Webpack
-* Ajax
-* JavaScript (ES6)
-* CSS Animation.
-* SCSS.
-* HTML5
-* Bulma (CSS framework)
-* GitHub
 
-## Woof Woof Dogs Page - React project
+* React
+* React-select
+* ReactMapBox-GL
+* Webpack
+* HTML5
+* SCSS
+* JavaScript (ES6)
+* Python
+* PostgreSQL
+* Flask
+* Git/GitHub
+* Bulma (CSS Framework)
+
+
+## Natural Products
 
 This was a pair-coding, hackathon project at General Assembly.
 
