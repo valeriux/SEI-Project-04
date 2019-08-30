@@ -27,14 +27,14 @@
 
 The brief was to build a full-stack application with a React front-end and PostgreSQL database. The application had to include data schema and a RESTful api framework to enable a user to register, login and add content.
 
-The application is deployed via Git on Heroku and can be found here: [Cabin Fever](https://natura-products.herokuapp.com/#/)
+The application is deployed via Git on Heroku and can be found here: [Natura cosmetics](https://natura-products.herokuapp.com/#/)
 
 ## Installation
 
 * Clone or Download the repo and from the terminal run the following commands:
   - yarn to install JavaScript packages.
   - pipenv to install Python packages.
-  
+
 * Next run:
   - yarn seeds to create the initial data for the database
   - yarn run:server - To launch the server
