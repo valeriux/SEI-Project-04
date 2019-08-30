@@ -6,13 +6,13 @@
   "author": "Valeria Bocanegra <valeriliux@icloud.com>",
   "license": "MIT",
   "scripts": {
-     "run:client": "webpack-dev-server --mode=development",
-     "run:server": "pipenv run flask run --port 4000",
-     "build": "webpack -p",
-     "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0",
-     "serve:react": "webpack-dev-server",
-     "serve:flask": "pipenv run flask run -p 4000"
-   },
+    "run:client": "webpack-dev-server --mode=development",
+    "run:server": "pipenv run flask run --port 4000",
+    "build": "webpack -p",
+    "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0",
+    "serve:react": "webpack-dev-server",
+    "serve:flask": "pipenv run flask run -p 4000"
+  },
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -28,7 +28,7 @@
     "filestack-react": "^2.0.6",
     "html-webpack-plugin": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mapbox-gl": "^1.0.0",
+    "mapbox-gl": "^1.3.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-alice-carousel": "^1.13.13",
@@ -37,7 +37,7 @@
     "react-image-gallery": "^0.8.17",
     "react-image-show": "^0.3.4",
     "react-map-gl": "^4.1.2",
-    "react-mapbox-gl": "^4.4.0",
+    "react-mapbox-gl": "^4.6.0",
     "react-responsive-carousel": "^3.1.49",
     "react-router-dom": "^5.0.0",
     "react-script": "^2.0.5",
