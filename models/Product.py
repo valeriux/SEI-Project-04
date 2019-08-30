@@ -16,7 +16,6 @@ class Product(db.Entity):
     category = Required('Category')
     user = Required('User')
 
-
 class ProductSchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)
@@ -31,8 +30,6 @@ class ProductSchema(Schema):
     category = fields.Nested('CategorySchema', exclude=('products',), dump_only=True)
     category_id = fields.Int(load_only=True)
     user = fields.Nested('UserSchema', exclude=('email', 'products'))
-
-
 
 
     @post_load

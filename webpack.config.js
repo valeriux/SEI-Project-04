@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve('public'),
     filename: 'bundle.js'
   },
-  devtool: 'source-maps',
+  devtool: 'source-map',
   module: {
     rules: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
