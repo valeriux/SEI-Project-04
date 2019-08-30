@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({
-  accessToken: process.env.MAPBOX_TOKEN
+  accessToken: 'pk.eyJ1IjoiYWltYW5vcyIsImEiOiJjanZtOXg5c3YxNnozNDltbHZ6cWM1OXpmIn0.ohog9SQ0ImDWOTTIKitI7Q'
+
 })
 
 class IndexMap extends React.Component {
@@ -25,7 +26,7 @@ class IndexMap extends React.Component {
 
 
   render() {
-    console.log(this.props, 'IndexMap.PROPS', process.env.MAPBOX_TOKEN)
+    console.log(this.props, 'IndexMap.PROPS')
     if (!this.props.products) {
       return <h1>  Loading...</h1>
     } else {
