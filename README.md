@@ -34,6 +34,7 @@ The application is deployed via Git on Heroku and can be found here: [Cabin Feve
 * Clone or Download the repo and from the terminal run the following commands:
   - yarn to install JavaScript packages.
   - pipenv to install Python packages.
+  
 * Next run:
   - yarn seeds to create the initial data for the database
   - yarn run:server - To launch the server
