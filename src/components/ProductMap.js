@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactMapboxGl, { Layer, Feature, Marker } from 'react-mapbox-gl'
 
+const mapBoxxToken = process.env.MAPBOX_TOKEN
+
 const Map = ReactMapboxGl({
-  accessToken: process.env.MAPBOX_TOKEN
+  accessToken: mapBoxxToken
 })
+
 
 class ProductMap extends React.Component {
 

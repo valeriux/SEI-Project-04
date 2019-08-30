@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
-const Map = ReactMapboxGl({
-  accessToken: process.env.MAPBOX_TOKEN
-})
+const mapBoxxToken = process.env.MAPBOX_TOKEN
 
+const Map = ReactMapboxGl({
+  accessToken: mapBoxxToken
+})
 
 class IndexMap extends React.Component {
 
@@ -26,7 +27,6 @@ class IndexMap extends React.Component {
 
 
   render() {
-    console.log(this.props, 'IndexMap.PROPS')
     if (!this.props.products) {
       return <h1>  Loading...</h1>
     } else {
