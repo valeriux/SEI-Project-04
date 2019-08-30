@@ -34,7 +34,7 @@ body{
 // **** ProductIndex **** //
 #buton_mapview, #buton_listview{
   font-family: 'Poppins', sans-serif;
-  background-image: url('images/natura5.jpg');
+  background-image: url('./images/natura5.jpg');
   margin-bottom: 20px;
   margin-left: 20px;
   color: black;
@@ -102,7 +102,7 @@ body{
     }
 
     .card-header{
-      background-image: url('images/natura5.jpg');
+      background-image: url('./images/natura5.jpg');
       color: white
     }
 
@@ -114,7 +114,7 @@ body{
 //**** Googlemaps Style **** //
 
 .popup {
-    background-image: url('images/natura5.jpg');
+    background-image: url('./images/natura5.jpg');
 }
 
 .popupimage{
@@ -152,7 +152,7 @@ body{
 
 //**** Login **** //
 .image_login{
-  background-image: url('images/natura3.jpg');
+  background-image: url('./images/natura3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -177,7 +177,7 @@ body{
 
 //**** Register **** //
 .image_register{
-  background-image: url('images/natura1.jpg');
+  background-image: url('./images/natura1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
