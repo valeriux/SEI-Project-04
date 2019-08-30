@@ -6,7 +6,6 @@ const Map = ReactMapboxGl({
   accessToken: process.env.MAPBOX_TOKEN
 })
 
-
 class IndexMap extends React.Component {
 
   constructor(props){
@@ -16,7 +15,7 @@ class IndexMap extends React.Component {
       pin: {},
       pinClick: false
     }
-    console.log('token', process.env.MAPBOX_TOKEN)
+    console.log('tokennnnnnnn', process.env.MAPBOX_TOKEN, 'helloooooo')
   }
 
   handleMarkerClick(product) {
@@ -26,7 +25,7 @@ class IndexMap extends React.Component {
 
 
   render() {
-    console.log(this.props, 'IndexMap.PROPS')
+    console.log(this.props, 'IndexMap.PROPS', process.env.MAPBOX_TOKEN)
     if (!this.props.products) {
       return <h1>  Loading...</h1>
     } else {
