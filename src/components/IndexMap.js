@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({
-  accessToken: 'pk.eyJ1IjoiYWltYW5vcyIsImEiOiJjanZtOXg5c3YxNnozNDltbHZ6cWM1OXpmIn0.ohog9SQ0ImDWOTTIKitI7Q'
-
+  accessToken: process.env.MAPBOX_TOKEN
 })
+
 
 class IndexMap extends React.Component {
 
