@@ -27,7 +27,7 @@
 
 The brief was to build a full-stack application with a React front-end and PostgreSQL database. The application had to include data schema and a RESTful api framework to enable a user to register, login and add content.
 
-The application is deployed via Git on Heroku and can be found here: [Natura cosmetics](https://natura-products.herokuapp.com/#/)
+The application is deployed via Git on Heroku and can be found here: [Natura cosmetics](https://natura-cosmetics.herokuapp.com/#/)
 
 ## Installation
 
