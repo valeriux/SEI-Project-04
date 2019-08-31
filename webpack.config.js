@@ -11,7 +11,6 @@ const EnvPlugin = process.env.NODE_ENV === 'production' ?  (
   new Dotenv()
 )
 
-
 module.exports = {
   entry: './src/app.js',
   output: {
